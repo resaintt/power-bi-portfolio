@@ -1,0 +1,196 @@
+.project-art.models-art {
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  background:
+    linear-gradient(180deg, transparent 55%, rgba(3, 17, 25, 0.55)),
+    url("../assets/models/spotify-power-bi.png") center / cover no-repeat;
+}
+
+.project-art.models-art::after {
+  content: "POWER BI · VISUAL SHOWCASE";
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(3, 17, 25, 0.78);
+  font: 700 0.65rem/1 var(--font-mono, monospace);
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(8px);
+}
+
+.project-art.models-art > * {
+  display: none !important;
+}
+
+.powerbi-gallery {
+  margin: 28px 0 36px;
+  padding: clamp(20px, 3vw, 34px);
+  border: 1px solid rgba(111, 150, 170, 0.26);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(8, 31, 43, 0.98), rgba(5, 21, 30, 0.98));
+  color: #eaf2f5;
+}
+
+.powerbi-gallery__heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.powerbi-gallery__eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #d9b66d;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.powerbi-gallery h3,
+.powerbi-gallery h4 {
+  margin: 0;
+  color: #f7fafb;
+}
+
+.powerbi-gallery__heading p,
+.powerbi-gallery figcaption p,
+.powerbi-gallery__note p {
+  margin: 7px 0 0;
+  color: #afc0c9;
+  line-height: 1.65;
+}
+
+.powerbi-gallery__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.powerbi-gallery__actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid rgba(220, 185, 109, 0.5);
+  border-radius: 999px;
+  color: #f2cd7b;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 750;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.powerbi-gallery__actions a:hover,
+.powerbi-gallery__actions a:focus-visible {
+  color: #071821;
+  background: #e1bd70;
+  transform: translateY(-2px);
+}
+
+.powerbi-gallery__featured,
+.powerbi-gallery__grid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(149, 180, 194, 0.22);
+  border-radius: 16px;
+  background: #07141b;
+}
+
+.powerbi-gallery__featured a,
+.powerbi-gallery__grid a {
+  display: block;
+  background: #02080b;
+}
+
+.powerbi-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 240ms ease, filter 240ms ease;
+}
+
+.powerbi-gallery a:hover img,
+.powerbi-gallery a:focus-visible img {
+  transform: scale(1.012);
+  filter: brightness(1.06);
+}
+
+.powerbi-gallery figcaption {
+  padding: 18px 20px 20px;
+}
+
+.powerbi-gallery__featured figcaption {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+}
+
+.powerbi-gallery__tag {
+  align-self: start;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: #44df85;
+  background: rgba(33, 204, 102, 0.12);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.powerbi-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.powerbi-gallery__note,
+.interactive-showcase-heading {
+  margin-top: 20px;
+  padding: 15px 17px;
+  border-left: 3px solid #d7b268;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.interactive-showcase-heading {
+  margin: 34px 0 18px;
+}
+
+.interactive-showcase-heading h3 {
+  margin: 0 0 5px;
+}
+
+.interactive-showcase-heading p {
+  margin: 0;
+  color: #607989;
+}
+
+@media (max-width: 760px) {
+  .project-art.models-art {
+    min-height: 210px;
+  }
+
+  .powerbi-gallery__heading,
+  .powerbi-gallery__featured figcaption,
+  .powerbi-gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .powerbi-gallery__actions a {
+    flex: 1 1 180px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .powerbi-gallery img,
+  .powerbi-gallery__actions a {
+    transition: none;
+  }
+}
